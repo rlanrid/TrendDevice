@@ -8,9 +8,8 @@ Trend Device는 각종 휴대폰들을 비교하고, 사람들과 소통할 수 
 ## 팀 소개
 | 김우주 | 윤영식 | 서유진 |
 | -------- | -------- | -------- |
-| Cell 1-1  | Cell 1-2  | Cell 1-3  |
-| Cell 2-1  | Cell 2-2  | Cell 2-3  |
-| Cell 3-1  | Cell 3-2  | Cell 3-3  |
+| <img alt="내 사진" src="https://github.com/rlanrid/vite-project2023/blob/main/src/assets/img/bgimg1.jpg">  | Cell 1-2  | Cell 1-3  |
+| https://github.com/rlanrid  | Cell 2-2  | Cell 2-3  |
 
 ## 사이트 바로가기
 http://rlanrider9.dothome.co.kr/TDsite/php/main/main.php
