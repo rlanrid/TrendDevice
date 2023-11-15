@@ -11,8 +11,8 @@ Trend Device는 각종 휴대폰들을 비교하고, 사람들과 소통할 수 
 ## 팀 소개
 |김우주|서유진|윤영식|
 |:---:|:---:|:---:|
-|<img width="150px" src="https://avatars.githubusercontent.com/u/144635640?v=4" />|<img width="150px" src="https://avatars.githubusercontent.com/u/144635615?v=4">|<img width="150px" src="https://avatars.githubusercontent.com/u/144635615?v=4">|
-|[@GIT](https://github.com/yunyoungsik/)|[@GIT](#)|[@GIT](https://github.com/rlanrid)|
+|<img width="150px" src="https://avatars.githubusercontent.com/u/144635615?v=4" />|<img width="150px" src="https://avatars.githubusercontent.com/u/144635615?v=4">|<img width="150px" src="https://avatars.githubusercontent.com/u/144635615?v=4">|
+|[@GIT](https://github.com/rlanrid)|[@GIT](#)|[@GIT](https://github.com/yunyoungsik/)|
 
 ## 사이트 바로가기
 http://rlanrider9.dothome.co.kr/TDsite/php/main/main.php
