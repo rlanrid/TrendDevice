@@ -12,7 +12,7 @@ Trend Device는 각종 휴대폰들을 비교하고, 사람들과 소통할 수 
 | 김우주 | 윤영식 | 서유진 |
 | -------- | -------- | -------- |
 | <img alt="내사진" src="https://github.com/rlanrid/webs2024/blob/main/TDsite/assets/img/profile.png">  | <img alt="조원사진" src="https://github.com/rlanrid/webs2024/blob/main/TDsite/assets/img/profile.png"> | <img alt="조원사진" src="https://github.com/rlanrid/webs2024/blob/main/TDsite/assets/img/profile.png">  |
-| (@git)[https://github.com/rlanrid]  | (@git)[#]  | (@git)[#]  |
+| [@git](https://github.com/rlanrid)  | [@git](#)  | [@git](#)  |
 
 ## 사이트 바로가기
 http://rlanrider9.dothome.co.kr/TDsite/php/main/main.php
