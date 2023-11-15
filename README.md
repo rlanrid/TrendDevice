@@ -15,7 +15,7 @@ Trend Device는 각종 휴대폰들을 비교하고, 사람들과 소통할 수 
 |[@GIT](https://github.com/rlanrid)|[@GIT](#)|[@GIT](https://github.com/yunyoungsik/)|
 
 ## 사이트 바로가기
-http://rlanrider9.dothome.co.kr/TDsite/php/main/main.php
+[Trend Device](http://rlanrider9.dothome.co.kr/TDsite/php/main/main.php)
 
 ## 작업 순서
 [작업과정](http://rlanrider9.dothome.co.kr/TDsite/index.html)
