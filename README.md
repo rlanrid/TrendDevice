@@ -9,10 +9,10 @@ Trend Device는 각종 휴대폰들을 비교하고, 사람들과 소통할 수 
 작업 시간: 3주
 
 ## 팀 소개
-| 김우주 | 윤영식 | 서유진 |
-| -------- | -------- | -------- |
-| <img alt="내사진" src="https://github.com/rlanrid/webs2024/blob/main/TDsite/assets/img/profile.png">  | <img alt="조원사진" src="https://github.com/rlanrid/webs2024/blob/main/TDsite/assets/img/profile.png"> | <img alt="조원사진" src="https://github.com/rlanrid/webs2024/blob/main/TDsite/assets/img/profile.png">  |
-| [@git](https://github.com/rlanrid)  | [@git](#)  | [@git](#)  |
+|김우주|서유진|윤영식|
+|:---:|:---:|:---:|
+|<img width="150px" src="https://avatars.githubusercontent.com/u/144635640?v=4" />|<img width="150px" src="https://avatars.githubusercontent.com/u/144635615?v=4">|<img width="150px" src="https://avatars.githubusercontent.com/u/144635615?v=4">|
+|[@GIT](https://github.com/yunyoungsik/)|[@GIT](#)|[@GIT](https://github.com/rlanrid)|
 
 ## 사이트 바로가기
 http://rlanrider9.dothome.co.kr/TDsite/php/main/main.php
