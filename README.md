@@ -19,6 +19,11 @@ Trend Device는휴대폰의 장단점을 명확히 보여주며, 사용자들이
 |<img width="150px" src="https://avatars.githubusercontent.com/u/144635615?v=4" />|<img width="150px" src="https://avatars.githubusercontent.com/u/144635615?v=4">|<img width="150px" src="https://avatars.githubusercontent.com/u/144635615?v=4">|
 |[@GIT](https://github.com/rlanrid)|[@GIT](#)|[@GIT](https://github.com/yunyoungsik/)|
 
+
+## 주요 기능
+1. 비교: 삼성과 애플의 다양한 스마트폰 모델의 사양, 기능, 가격 등을 비교할 수 있는 환경을 제공하며, 2개에서 최대 4개까지 사용자들이 설정한 환경에서 비교, 분석을 할 수 있습니다.
+2. 경험: 사용자들의 다양한 제품 사용경험을 리뷰를 통해 공유하여 제품 사용경험을 미리 파악 할수 있으며, 상품과 상품을 설정하여 토론을 진행하여 제품을 구매하는 부분에 참고할 수 있습니다.
+
 ## 사이트 바로가기
 [Trend Device](http://rlanrider9.dothome.co.kr/TDsite/php/main/main.php)
 
