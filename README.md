@@ -17,12 +17,11 @@ Trend Device는휴대폰의 장단점을 명확히 보여주며, 사용자들이
 |김우주|서유진|윤영식|
 |:---:|:---:|:---:|
 |<img width="150px" src="https://avatars.githubusercontent.com/u/144635615?v=4" />|<img width="150px" src="https://avatars.githubusercontent.com/u/144635615?v=4">|<img width="150px" src="https://avatars.githubusercontent.com/u/144635615?v=4">|
-|[@GIT](https://github.com/rlanrid)|[@GIT](#)|[@GIT](https://github.com/yunyoungsik/)|
+|[@GIT](https://github.com/rlanrid)|[@GIT]([#](https://github.com/seoeugene)|[@GIT](https://github.com/yunyoungsik/)|
 
 
 ## 주요 기능
 1. 비교: 삼성과 애플의 다양한 스마트폰 모델의 사양, 기능, 가격 등을 비교할 수 있는 환경을 제공하며, 2개에서 최대 4개까지 사용자들이 설정한 환경에서 비교, 분석을 할 수 있습니다.
-<br>
 2. 경험: 사용자들의 다양한 제품 사용경험을 리뷰를 통해 공유하여 제품 사용경험을 미리 파악 할수 있으며, 상품과 상품을 설정하여 토론을 진행하여 제품을 구매하는 부분에 참고할 수 있습니다.
 
 ## 사이트 바로가기
@@ -44,7 +43,22 @@ Trend Device는휴대폰의 장단점을 명확히 보여주며, 사용자들이
 1. 사용자가 클릭한 게시글의 정보를 boardId와 카테고리를 이용해 가져옵니다.
 2. 가져온 데이터를 fetch_array 함수를 사용해 배열로 반환한 후, 각각 데이터를 보여줍니다.
 3. 이전 글과 다음 글은 boardId가 작거나 큰 Id들 중 하나만 가져와서 페이지를 만들었습니다.
-4. 처음 글과 마지막 글도 비슷한 맥
+4. 처음 글과 마지막 글도 이전 글과 비슷한 맥락으로 가져왔습니다.
+
+**댓글**
+1. 댓글 기능을 만들기 위해 댓글테이블을 새로 만들었습니다.
+2. 댓글 작성 시에 게시글의 위치와 댓글 작성자를 알아야하기 때문에 해당 게시글의 boardId와 memberId를 저장합니다.
+3. 삭제 또는 수정 시에는 memberId와 commentId를 확인해 일치하는 경우에만 가능하게 만들었습니다.
+4. 댓글을 보여주는 작업은 해당 게시글의 boardId와 댓글 작성시에 저장해둔 boardId를 비교하여 일치하는 데이터만 보여줍니다.
+
+**공감**
+1. 공감기능도 댓글기능과 마찬가지로 공감테이블을 만들었습니다.
+2. 공감을 했을경우 boardId를 저장하고 session에서 memberId를 받아온 뒤 일치하는 이미 공감을 했다면 알림창을 띄우고, 공감을 하지 않은 경우에는 버튼의 색상을 변경하도록 만들었습니다.
+3. session에서 memberId를 받아오고, 만약 받아올 memberId가 없다면, 로그인 창으로 이동하게됩니다.
+
+**위시리스트**
+
+
 
 
 ## 스택
