@@ -36,13 +36,19 @@ Trend Device는휴대폰의 장단점을 명확히 보여주며, 사용자들이
 저는 이 페이지의 게시판, 게시글, 위시리스트, 댓글, 공감 등의 기능을 맡았습니다.   
 
 **게시판**
-1. board테이블에서 삭제되지 않은 게시글 정보들을 boardId를 기준으로 내림차순해서 가져온다.
-2. 가져온 정보들 중에서 카테고리와 일치하는 게시글들을 추려서 가져온다.
-3. 데이터를 10개씩 페이지로 나누어 화면에 정보를 보여준다.
+1. board테이블에서 삭제되지 않은 게시글 정보들을 boardId를 기준으로 내림차순해서 가져옵니다.
+2. 가져온 정보들 중에서 카테고리와 일치하는 게시글들을 추려서 가져옵니다.
+3. 데이터를 10개씩 페이지로 나누어 화면에 정보를 보여줍니다.
 
 **게시글**
-1. 사용자가 클릭한 게시글의 정보를 boardId와 카테고리를 이용해 가져온다.
-   `SELECT * FROM FBoard WHERE blogId = '$blogId' AND fCategory = '$category'`
+1. 사용자가 클릭한 게시글의 정보를 boardId와 카테고리를 이용해 가져옵니다.
+<br>
+`SELECT * FROM FBoard WHERE blogId = '$blogId' AND fCategory = '$category'`
+2. 가져온 데이터를 fetch_array 함수를 사용해 배열로 반환한 후, 각각 데이터를 보여줍니다.
+<br>
+`$boardInfo = $boardResult -> fetch_array(MYSQLI_ASSOC);`
+3. 이전 글과 다음 글은 boardId가 작거나 큰 Id들 중 하나만 가져와서 페이지를 만들었다.
+4. 처음 글과 마지막 글도 비슷한 맥
 
 
 ## 스택
