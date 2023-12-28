@@ -17,7 +17,7 @@ Trend Device는휴대폰의 장단점을 명확히 보여주며, 사용자들이
 |김우주|서유진|윤영식|
 |:---:|:---:|:---:|
 |<img width="150px" src="https://avatars.githubusercontent.com/u/144635615?v=4" />|<img width="150px" src="https://avatars.githubusercontent.com/u/144635615?v=4">|<img width="150px" src="https://avatars.githubusercontent.com/u/144635615?v=4">|
-|[@GIT](https://github.com/rlanrid)|[@GIT]([#](https://github.com/seoeugene)|[@GIT](https://github.com/yunyoungsik/)|
+|[@GIT](https://github.com/rlanrid)|[@GIT](https://github.com/seoeugene)|[@GIT](https://github.com/yunyoungsik/)|
 
 
 ## 주요 기능
