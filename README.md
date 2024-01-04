@@ -1,6 +1,8 @@
 # Trend__Device
 PHP를 이용하여 휴대폰 비교하기 사이트를 만들었습니다.
 
+<img src="https://github.com/rlanrid/TrendDevice/blob/main/TDsite/assets/TDsiteCover.png">
+
 ## 프로젝트 소개
 Trend Device는 직관적이고 사용하기 편리한 인터페이스를 제공하여 사용자가 원하는 휴대폰 모델을 선택하고, 선택한 모델들을 한눈에 비교할 수 있도록 합니다.    
 <br>
