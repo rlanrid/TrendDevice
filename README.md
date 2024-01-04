@@ -1,4 +1,4 @@
-# Trend__Device
+# Trend Device
 PHP를 이용하여 휴대폰 비교하기 사이트를 만들었습니다.
 
 <img src="https://github.com/rlanrid/TrendDevice/blob/main/TDsite/assets/TDsiteCover.png">
