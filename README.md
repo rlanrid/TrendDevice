@@ -72,6 +72,8 @@ $prevBoardInfo = $prevBoardResult -> fetch_array(MYSQLI_ASSOC);
 
 현재의 boardId보다 큰 boardId들을 불러온 뒤 올림차순으로 1개만 가져오면 이전 글을 가져올 수 있습니다.
 ```
+<br />
+<br />
 
 **댓글**
 1. 댓글 기능을 만들기 위해 댓글테이블을 새로 만들었습니다.
@@ -107,6 +109,9 @@ $commentInfo = $commentResult -> fetch_array(MYSQLI_ASSOC);
 $commentCount = $commentResult -> num_rows;
 ```
 
+<br />
+<br />
+
 **공감**
 1. 공감기능도 댓글기능과 마찬가지로 공감테이블을 만들었습니다.
 2. 공감을 했을경우 boardId를 저장하고 session에서 memberId를 받아온 뒤 일치하는 이미 공감을 했다면 알림창을 띄우고, 공감을 하지 않은 경우에는 버튼의 색상을 변경하도록 만들었습니다.
@@ -128,6 +133,9 @@ if($result){
 }
 ```
 
+<br />
+<br />
+
 **위시리스트**
 1. 위시리스트는 따로 테이블을 만들기보다, 기존의 공감 테이블을 활용했습니다.
 2. 상품게시판에서 찜하기(하트 버튼)을 클릭하면, 공감 테이블에 phoneId와 memberId를 저장합니다.
@@ -147,6 +155,8 @@ $wishInfo = $wishResult -> fetch_all(MYSQLI_ASSOC);
 $wishCount = $wishResult->num_rows;
 ```
 
+<br />
+<br />
 
 ## 트러블슈팅
 <details>
