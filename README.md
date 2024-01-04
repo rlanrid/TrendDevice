@@ -77,16 +77,73 @@ $prevBoardInfo = $prevBoardResult -> fetch_array(MYSQLI_ASSOC);
 3. 삭제 또는 수정 시에는 memberId와 commentId를 확인해 일치하는 경우에만 가능하게 만들었습니다.
 4. 댓글을 보여주는 작업은 해당 게시글의 boardId와 댓글 작성시에 저장해둔 boardId를 비교하여 일치하는 데이터만 보여줍니다.
 
+```js
+// 사용자가 입력한 정보를 POST방식으로 받아와서 데이터베이스에 저장
+$blogId = $_POST['blogId'];
+$memberId = $_POST['memberId'];
+$commentName = $_POST['name'];
+$commentPass = $_POST['pass'];
+$commentWrite = $_POST['msg'];
+$regTime = time();
+
+$sql =  $sql = "INSERT INTO boardComment(memberId, boardId, commentName, commentPass, commentMsg, commentDelete, regTime) VALUES('$memberId', '$blogId', '$commentName', '$commentPass', '$commentWrite', '1', '$regTime')";
+$result = $connect -> query($sql);
+
+
+// 삭제 또는 수정 시에는 댓글 소유자 확인
+$commentPass = $_POST['commentPass'];
+$commentId = $_POST['commentId'];
+
+$sql = "SELECT commentPass FROM boardComment WHERE commentPass = '$commentPass' AND commentId = '$commentId'";
+$result = $connect -> query($sql);
+
+
+// boardId와 일치하는 댓글만 가져오기
+$commentSql = "SELECT * FROM boardComment WHERE boardId = '$blogId' AND commentDelete = '1' ORDER BY commentId ASC";
+$commentResult = $connect -> query($commentSql);
+$commentInfo = $commentResult -> fetch_array(MYSQLI_ASSOC);
+$commentCount = $commentResult -> num_rows;
+```
+
 **공감**
 1. 공감기능도 댓글기능과 마찬가지로 공감테이블을 만들었습니다.
 2. 공감을 했을경우 boardId를 저장하고 session에서 memberId를 받아온 뒤 일치하는 이미 공감을 했다면 알림창을 띄우고, 공감을 하지 않은 경우에는 버튼의 색상을 변경하도록 만들었습니다.
 3. session에서 memberId를 받아오고, 만약 받아올 memberId가 없다면, 로그인 창으로 이동하게됩니다.
+
+```js
+// 게시물에 공감 숫자 증가
+$updateLikeSql = "UPDATE FBoard SET fLike = fLike + 1 WHERE blogId = '$blogId'";
+$result = $connect->query($updateLikeSql);
+
+if($result){
+    // 공감한 경우, LikedPosts 테이블에 사용자, 게시글 정보 등을 기록
+    $insertLikeSql = "INSERT INTO LikedPosts (memberId, blogId, likeCategory) VALUES ('$memberId', '$blogId', '$category')";
+    $connect->query($insertLikeSql);
+
+    echo json_encode(["info" => "success"]);
+} else {
+    echo json_encode(["info" => "error"]);
+}
+```
 
 **위시리스트**
 1. 위시리스트는 따로 테이블을 만들기보다, 기존의 공감 테이블을 활용했습니다.
 2. 상품게시판에서 찜하기(하트 버튼)을 클릭하면, 공감 테이블에 phoneId와 memberId를 저장합니다.
 3. 마이페이지의 위시리스트에 이동하면 JOIN문을 사용하여 상품테이블과 공감 테이블을 합쳐줍니다.
 4. 합친 데이터에서 memberId와 phoneId 등을 비교하여 가져온 데이터의 정보들을 보여줍니다.
+
+```js
+// 세션정보
+$memberID = $_SESSION['memberID'];
+$youName = $_SESSION['youName'];
+
+// 상품정보 가져오기 (공감 테이블과 폰 테이블을 JOIN문으로 합침)
+$wishSql = "SELECT L.memberId, L.phoneId, L.likeCategory, P.phoneId, P.pTitle, P.pImgFile FROM LikedPosts L JOIN Phone P ON L.phoneId = P.phoneId WHERE L.memberId = '$memberID' ORDER BY L.likeId DESC";
+$wishResult = $connect -> query($wishSql);
+$wishInfo = $wishResult -> fetch_all(MYSQLI_ASSOC);
+
+$wishCount = $wishResult->num_rows;
+```
 
 
 ## 트러블슈팅
