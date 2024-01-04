@@ -42,8 +42,11 @@ Trend Device는휴대폰의 장단점을 명확히 보여주며, 사용자들이
 3. 데이터를 10개씩 페이지로 나누어 화면에 정보를 보여줍니다.
 
 ```js
-$boardSql = "SELECT * FROM FBoard WHERE fDelete = 1 ORDER BY blogId DESC";
-$FboardInfo = $connect -> query($boardSql);
+$boardSql = "SELECT * FROM FBoard WHERE fDelete = 1 ORDER BY blogId DESC"; // 삭제여부는 fDelete로 판단, blogID를 기준으로 내림차순
+$FboardInfo = $connect -> query($boardSql); // 데이터베이스에 쿼리를 전달
+
+$sql = "SELECT * FROM FBoard WHERE fDelete = 1 AND fCategory = '$category' ORDER BY blogId DESC LIMIT {$viewLimit}, {$viewNum}"; // $viewLimit과 viewNum은 설정한 변수, 카테고리에 알맞는 게시글들을 갯수제한에 맞게 불러옴
+$result = $connect -> query($sql);
 ```
 
 **게시글**
