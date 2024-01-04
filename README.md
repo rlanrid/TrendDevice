@@ -68,6 +68,7 @@ Trend Device는휴대폰의 장단점을 명확히 보여주며, 사용자들이
 ## 트러블슈팅
 <details>
     <summary>공감 오류</summary>
+    
     - 문제 원인   
     
     $unlikeSql = "UPDATE FBoard SET fLike = fLike - 1 WHERE blogId = '$blogId'";
