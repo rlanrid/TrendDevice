@@ -50,8 +50,8 @@ $FboardInfo = $connect -> query($boardSql);
 $sql = "SELECT * FROM FBoard WHERE fDelete = 1 AND fCategory = '$category' ORDER BY blogId DESC LIMIT {$viewLimit}, {$viewNum}"; 
 $result = $connect -> query($sql);
 ```
-
-
+<br />
+<br />
 
 **게시글**
 1. 사용자가 클릭한 게시글의 정보를 boardId와 카테고리를 이용해 가져옵니다.
