@@ -65,6 +65,29 @@ Trend Device는휴대폰의 장단점을 명확히 보여주며, 사용자들이
 4. 합친 데이터에서 memberId와 phoneId 등을 비교하여 가져온 데이터의 정보들을 보여줍니다.
 
 
+## 트러블슈팅
+<details>
+    <summary>공감 오류</summary>
+    - 문제 원인   
+    
+    $unlikeSql = "UPDATE FBoard SET fLike = fLike - 1 WHERE blogId = '$blogId'";
+    $connect->query($unlikeSql);
+    $deleteLikeSql = "DELETE FROM LikedPosts WHERE blogId = '$blogId'";
+    $connect->query($deleteLikeSql);
+
+    memberId와 $memberId (현재 세션의 memberID)가 같은 경우에만 공감테이블에서 삭제해야 하는데 그 부분이 빠졌다.
+
+    - 문제 해결
+    
+    $memberId = $_SESSION['memberID'];
+    $unlikeSql = "UPDATE FBoard SET fLike = fLike - 1 WHERE blogId = '$blogId'";
+    $connect->query($unlikeSql);
+    $deleteLikeSql = "DELETE FROM LikedPosts WHERE memberId = '$memberId' AND blogId = '$blogId'";
+    $connect->query($deleteLikeSql);
+    
+    현제 세션을 가져와서 조건문에 넣으면 해결된다.
+</details>
+
 
 ## 스택
 **Environment**
