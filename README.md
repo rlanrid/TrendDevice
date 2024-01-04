@@ -51,6 +51,8 @@ $sql = "SELECT * FROM FBoard WHERE fDelete = 1 AND fCategory = '$category' ORDER
 $result = $connect -> query($sql);
 ```
 
+
+
 **게시글**
 1. 사용자가 클릭한 게시글의 정보를 boardId와 카테고리를 이용해 가져옵니다.
 2. 가져온 데이터를 fetch_array 함수를 사용해 배열로 반환한 후, 각각 데이터를 보여줍니다.
