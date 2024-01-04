@@ -41,6 +41,11 @@ Trend Device는휴대폰의 장단점을 명확히 보여주며, 사용자들이
 2. 가져온 정보들 중에서 카테고리와 일치하는 게시글들을 추려서 가져옵니다.
 3. 데이터를 10개씩 페이지로 나누어 화면에 정보를 보여줍니다.
 
+```js
+$boardSql = "SELECT * FROM FBoard WHERE fDelete = 1 ORDER BY blogId DESC";
+$FboardInfo = $connect -> query($boardSql);
+```
+
 **게시글**
 1. 사용자가 클릭한 게시글의 정보를 boardId와 카테고리를 이용해 가져옵니다.
 2. 가져온 데이터를 fetch_array 함수를 사용해 배열로 반환한 후, 각각 데이터를 보여줍니다.
