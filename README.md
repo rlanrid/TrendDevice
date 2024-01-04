@@ -57,6 +57,20 @@ $result = $connect -> query($sql);
 3. 이전 글과 다음 글은 boardId가 작거나 큰 Id들 중 하나만 가져와서 페이지를 만들었습니다.
 4. 처음 글과 마지막 글도 이전 글과 비슷한 맥락으로 가져왔습니다.
 
+```js
+// boardId, 카테고리에 맞는 게시글 가져오기
+$boardSql = "SELECT * FROM FBoard WHERE blogId = '$blogId' AND fCategory = '$category'";
+$boardResult = $connect -> query($boardSql);
+$boardInfo = $boardResult -> fetch_array(MYSQLI_ASSOC);
+
+// 이전글(다음 글은 내림차순으로 설정)
+$prevBoardSql = "SELECT * FROM FBoard WHERE blogId > '$blogId' AND fCategory = '$category' ORDER BY blogId ASC LIMIT 1";
+$prevBoardResult = $connect -> query($prevBoardSql);
+$prevBoardInfo = $prevBoardResult -> fetch_array(MYSQLI_ASSOC);
+
+현재의 boardId보다 큰 boardId들을 불러온 뒤 올림차순으로 1개만 가져오면 이전 글을 가져올 수 있습니다.
+```
+
 **댓글**
 1. 댓글 기능을 만들기 위해 댓글테이블을 새로 만들었습니다.
 2. 댓글 작성 시에 게시글의 위치와 댓글 작성자를 알아야하기 때문에 해당 게시글의 boardId와 memberId를 저장합니다.
